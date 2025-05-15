@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/casamento-emio-thayla.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/reset.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+    <title>Casamento Emio & Thayla</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src = "{% static 'assets/img/img1.svg' %}" alt="flores">
+        <img src = "{% static 'assets/img/img-2.svg' %}" alt="menu">
+    </header>
+    <h1 class="texto_1">
+        <p class="paragrafo_1">
+            Salve esta data
+        </p>
+        <p class="paragrafo_2">
+            Thayla & Emio
+        </p>
+        <p class="paragrafo_3">
+            A cerimônia é o momento mais especial de nossas<br> 
+            vidas, e ter você conosco tornará esse dia ainda<br> 
+            mais significativo
+        </p>
+        <div class="data_casamento">
+            <p class="dia_semana_casamento">
+                SÁBADO
+            </p>
+            <div class="dia_mes_ano_casamento">
+                <p class="dia">12</p>
+                <p class="mes">Julho</p>
+                <p class="ano">2025</p>
+            </div>
+            <p class="dia_semana_casamento">
+                ÀS 20:00h
+            </p>
+        </div>
+        <p class="paragrafo_3">
+            Igreja de Santa Terezinha do Menino Jesus<br>
+            Rua Verbena, 616 - Aeroporto Velho
+        </p>
+    </h1>
+    <div class="container">
+        <img src = "{% static 'assets/img/img-3.svg' %}" alt="flores" class="imagem-3">
+    </div>
+    <div class="ordenamento-orientacoes">
+        <div class="orientacoes">
+            <p class="orientacoes-1">
+                Orientações do casal
+            </p>
+            <p class="orientacoes-2">
+                Para que possamos celebrar esse momento tão<br>
+                especial em harmonia, agradecemos se puderem<br>
+                permanecer conosco durante toda a cerimônia.
+            </p>
+            <div class="orientacoes-casal">
+                <p class="orientacoes-casal-titulo" onclick="toggleDescricao(this)">
+                    <span>Seja Pontual</span>
+                    <span class="icone">-</span>
+                </p>
+                <p class="orientacoes-casal-descricao">
+                    Chegar a tempo é o melhor presente para essa memória tão especial.
+                </p>
+            </div>
+            <div class="orientacoes-casal">
+                <p class="orientacoes-casal-titulo" onclick="toggleDescricao(this)">
+                    <span>Siga Código de Vestimenta</span>
+                    <span class="icone">-</span>
+                </p>
+                <p class="orientacoes-casal-descricao">
+                    Traje sugerido: esporte fino ou casual para maior conforto.
+                </p>
+            </div>
+            <div class="orientacoes-casal">
+                <p class="orientacoes-casal-titulo" onclick="toggleDescricao(this)">
+                    <span>Não Use Branco</span>
+                    <span class="icone">-</span>
+                </p>
+                <p class="orientacoes-casal-descricao">
+                    Esta é a cor da noiva. Sugerimos cores além da paleta de brancos e tons claros.<br>
+                    Marsala é cor das madrinhas.<br>
+                    Verde oliva é cor das mães.
+                </p>
+            </div>
+            <div class="orientacoes-casal">
+                <p class="orientacoes-casal-titulo" onclick="toggleDescricao(this)">
+                    <span>Cuide da decoração</span>
+                    <span class="icone">-</span>
+                </p>
+                <p class="orientacoes-casal-descricao">
+                    Cada detalhe da decoração foi cuidadosamente planejado para criar um momento especial. Agradecemos por ajudarem a preservar essa magia
+                </p>
+            </div>
+            <div class="orientacoes-casal">
+                <p class="orientacoes-casal-titulo" onclick="toggleDescricao(this)">
+                    <span>Aguarde o momento certo para os doces</span>
+                    <span class="icone">-</span>
+                </p>
+                <p class="orientacoes-casal-descricao">
+                    Os doces terão seu momento especial, e será mais doce ainda compartilhá-lo com vocês!
+                </p>
+            </div>
+        </div>
+        <div class="conjunto-imagens">
+            <img class="imagem-mobile" src="{% static 'assets/img/img-4.svg' %}" alt="grupo-de-fotos-mobile">
+            <img class="imagem-desktop" src="{% static 'assets/img/img-15.svg' %}" alt="grupo-de-fotos-desktop">
+        </div>        
+    </div>
+    <h4 class="recepcao">
+        <button class="recepcao-cerimonia">
+            <p class="recepcao-cerimonia-titulo">Recepção pós-cerimônia</p>
+            <div class="recepcao-cerimonia-mini-retangulo">
+                <p class="recepcao-cerimonia-texto">CONVIDAMOS COM CARINHO PARA A</p>
+                <p class="recepcao-cerimonia-texto">RECEPÇÃO NO ESPAÇO</p>
+                <p class="recepcao-cerimonia-local">Sungarden</p>
+            </div>
+            <p class="recepcao-cerimonia-texto">RUA ITUPIRANGA, 210 - SANTARENZINHO</p>
+            <img src="{% static 'assets/img/img-6.svg' %}" alt="aliança">
+            <p class="recepcao-cerimonia-texto">SERÁ UMA ALEGRIACELEBRAR COM VOCÊS</p>
+            <p class="recepcao-cerimonia-texto">Observações: Este momento especial é reservado<br>aos nossos queridos convidados da cerimônia.</p>
+        </button>
+    </h4>
+
+    <h5 class="confirmacao-presenca">
+        <div class="confirmacao-presenca-div">
+            <p class="confirmacao-presenca-titulo">
+                Confirme sua presença
+            </p>
+            <p class="confirmacao-presenca-descricao">sua resposta é a peça que falta em nossa<br>
+                celebração. insira o seu nome  abaixo:
+            </p>
+            <form class="form-confirmacao" action="{% url 'convite' %}" method="POST">
+                {% csrf_token %}
+                <input name="nome" class="confirmacao-presenca-input" placeholder="Ex: Tia Ana">
+                <button class="confirmacao-presenca-botao">Confirmar</button>
+            </form>
+        </div>
+    </h5>
+
+    <h6 id="presentes" class="lista-presente">
+        <p class="lista-presente-titulo">Lista de presentes</p>
+        <p class="lista-presente-descricao">
+            Se o coração lhe inspirar, ficaremos<br>
+            felizes com qualquer gesto de<br>
+            carinho.
+        </p>
+        <div class="carrossel">          
+            <div class="slides">
+                {% csrf_token %}
+                <ul class="slide ativo">
+                    {% for presente in presentes %}
+                    <li class="card">
+                        <img src="{{ presente.foto.url }}" alt="porta-tempero">
+                        <p class="descricao-presente">{{ presente.nome }}</p>
+                        <p class="preco-presente">{{ presente.preco }}</p>
+                        <a href="{{ presente.pix_link }}" target="_blank">
+                            <button class="botao-comprar">COMPRAR</button>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="botoes-navegacao">
+                <button class="anterior">‹</button>
+                <button class="proximo">›</button>
+              </div>
+          </div>          
+    </h6>
+    <div class="final">
+        <img src = "{% static 'assets/img/img-11.svg' %}" alt="flores">
+        <p class="final-texto">
+            “Nada acontece que<br> Deus não tenha<br> previsto durante toda a eternidade”<br>(Santa Teresinha)
+        </p>
+        <p class="final-texto-agradecimento">
+            Com gratidão por fazerem parte da nossa história,<br>
+            contamos com suas orações e bênçãos para esta nova<br>
+            jornada que se inicia.
+        </p>
+        <p class="final-texto-agradecimento-palavra">
+            Com amor,
+        </p>
+        <p class="final-texto-agradecimento-noivos">
+            Thayla & Emio
+        </p>
+        <img src = "{% static 'assets/img/img-12.svg' %}" alt="flores">
+    </div>
+
+    <script>
+        function toggleDescricao(elemento) {
+            const descricao = elemento.nextElementSibling;
+            const icone = elemento.querySelector(".icone");
+        
+            const visivel = descricao.style.display === "block";
+            descricao.style.display = visivel ? "none" : "block";
+            icone.textContent = visivel ? "+" : "–";
+        }
+    </script>
+
+    <script>
+        window.addEventListener('load', () => {
+        const slideContainer = document.querySelector(".slide");
+        const cards = document.querySelectorAll(".card");
+        const btnProximo = document.querySelector(".proximo");
+        const btnAnterior = document.querySelector(".anterior");
+    
+        let index = 0;
+        const total = cards.length;
+        const cardWidth = cards[0].offsetWidth + 16; // inclui o gap (1rem = 16px)
+    
+        function atualizarCarrossel() {
+            slideContainer.style.transform = `translateX(-${cardWidth * index}px)`;
+        }
+    
+        btnProximo.addEventListener("click", () => {
+            index = (index + 1) % total; // vai para o próximo ou volta para 0
+            atualizarCarrossel();
+        });
+    
+        btnAnterior.addEventListener("click", () => {
+            index = (index - 1 + total) % total; // vai para o anterior ou volta para o último
+            atualizarCarrossel();
+        });
+        });
+    </script>
+  
+</body>

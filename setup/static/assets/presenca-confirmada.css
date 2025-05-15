@@ -1,0 +1,88 @@
+:root{
+    --cor-principal: #cd9097;
+    --fonte-principal: 'Baskervville', serif;
+  }
+  
+  @font-face {
+      font-family: 'Casamento';
+      src: url('fonts/parfumerie-script-regular.otf') format('opentype');
+      /* ou .woff com format('woff') */
+    }
+    
+.confirmacao-presenca-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centraliza no eixo horizontal */
+    justify-content: center;   /* centraliza no eixo vertical */
+    gap: 2.5rem;
+    }
+      
+  
+  .confirmacao-presenca-titulo{
+    font-family: 'Casamento';
+    font-weight: 400;
+    font-size: 4rem;
+    color: var(--cor-principal);
+  }
+  
+  .confirmacao-presenca-descricao{
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-principal);
+    text-align: center;
+  }
+  
+  .confirmacao-presenca-botao{
+    text-decoration: none;
+    text-align: center;
+    width: 65%;
+    border-radius: 1rem;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    height: 2.4rem;
+    font-family: var(--fonte-principal);
+    cursor: pointer;
+    display: flex;
+    align-items: center;       /* centraliza verticalmente */
+    justify-content: center;
+  }
+  
+  .confirmacao-presenca-input.selecionado {
+    box-shadow: 0 0 10px var(--cor-principal);
+}
+
+@media (min-width: 1024px) {
+  .confirmacao-presenca-titulo{
+    font-family: 'Casamento';
+    font-weight: 400;
+    font-size: 10rem;
+    color: var(--cor-principal);
+  }  
+  
+  .confirmacao-presenca-descricao{
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cor-principal);
+    text-align: center;
+  }
+
+  .confirmacao-presenca-botao{
+    text-decoration: none;
+    text-align: center;
+    width: 35%;
+    border-radius: 6rem;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    height: 3.4rem;
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;       /* centraliza verticalmente */
+    justify-content: center;
+  }
+}

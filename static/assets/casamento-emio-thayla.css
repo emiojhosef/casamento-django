@@ -1,0 +1,914 @@
+:root{
+  --cor-principal: #cd9097;
+  --fonte-principal: 'Baskervville', serif;
+}
+
+@font-face {
+    font-family: 'Casamento';
+    src: url('fonts/parfumerie-script-regular.otf') format('opentype');
+    /* ou .woff com format('woff') */
+  }
+
+  .cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+  }
+
+.texto_1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragrafo_1{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+  padding-top: 2rem;
+}
+
+.paragrafo_2{
+  font-family: 'Casamento';
+  font-weight: 400;
+  font-size: 5.625rem;
+  color: var(--cor-principal);
+  padding-top: 1.5rem;
+}
+
+.paragrafo_3{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--cor-principal);
+  display: flex;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.data_casamento{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:2.3rem;
+  color: var(--cor-principal);
+  padding-top: 3rem;
+}
+
+.dia_semana_casamento {
+  color: var(--cor-principal);
+  font-weight: 400;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--cor-principal);;
+  border-top: 2px solid var(--cor-principal);;
+}
+
+.dia_mes_ano_casamento{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.dia{
+  font-family: var(--fonte-principal);
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.mes{
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.ano{
+  font-family: var(--fonte-principal);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.container {
+  position: relative;
+  margin-top: 12rem;
+}
+
+.imagem-3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ordenamento-orientacoes{
+  display: flex;
+  flex-direction: column;
+}
+
+.orientacoes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.orientacoes-1{
+  font-family: 'Casamento';
+  font-weight: 400;
+  font-size: 5.375rem;
+  color: var(--cor-principal);
+  text-align: center;
+}
+
+.orientacoes-2{
+  font-family: var(--fonte-principal);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-principal);
+  padding-top: 2rem;
+}
+
+.orientacoes-casal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--cor-principal);
+  /*border-bottom: 2px solid var(--cor-principal);;
+  border-top: 2px solid var(--cor-principal);;*/
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.orientacoes-casal-titulo{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 1rem;
+  padding-top: 2rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.orientacoes-casal-descricao{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.conjunto-imagens{
+  padding-top: 5rem;
+  padding-left: 2rem;
+}
+
+.imagem-desktop {
+  display: none;
+}
+
+.imagem-mobile {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.recepcao {
+  background-image: url("img/img-5.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 54.625rem;
+  width: 100%;
+
+  display: flex;              /* Ativa o Flexbox */
+  justify-content: center;    /* Centraliza na horizontal */
+  align-items: center;        /* Centraliza na vertical */
+}
+
+.recepcao-cerimonia {
+  width: 22.5rem;
+  height: 35rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  padding-bottom: 3rem;
+}
+
+.recepcao-cerimonia-titulo{
+  font-family: 'Casamento';
+  font-size: 3.255rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.recepcao-cerimonia-mini-retangulo{
+  width: 15.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recepcao-cerimonia-texto{
+  font-family: var(--fonte-principal);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.recepcao-cerimonia-local{
+  font-family: 'Casamento';
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.confirmacao-presenca{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 28.5rem;
+  padding-top: 8rem;
+}
+
+.confirmacao-presenca-div{
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.confirmacao-presenca-titulo{
+  font-family: 'Casamento';
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: var(--cor-principal);
+}
+
+.confirmacao-presenca-descricao{
+  font-family: var(--fonte-principal);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-principal);
+}
+
+.form-confirmacao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.confirmacao-presenca-input{
+  width: 80%;
+  height: 2.7rem;
+  border-radius: 1.2rem;
+  border-color: var(--cor-principal);
+  font-family: var(--fonte-principal);
+  font-size: 2rem;
+  color: var(--cor-principal);
+  padding-left: 1rem;
+}
+
+.confirmacao-presenca-input::placeholder {
+  padding-left: 1rem;
+  color: var(--cor-principal);
+}
+
+.confirmacao-presenca-botao{
+  width: 65%;
+  border-radius: 1rem;
+  background-color: var(--cor-principal);
+  color: #ffffff;
+  height: 2.2rem;
+  font-family: var(--fonte-principal);
+}
+
+.lista-presente{
+  background-color: var(--cor-principal);
+  height: 48rem;
+  background-color: #dba5ab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+  padding: 3rem 0;
+}
+
+.lista-presente-descricao{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.lista-presente-titulo{
+  font-family: 'Casamento';
+  font-weight: 400;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.carrossel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slides {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  flex: 0 0 auto; /* mostra ~80% do card, com o resto visível */
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-principal);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: fit-content;
+}
+
+.card img {
+  width: 200px;         /* ou qualquer valor que se encaixe bem no layout */
+  height: 200px;        /* igual à largura para ficar quadrada, ou ajuste conforme desejar */
+  object-fit: cover;    /* ou use 'contain' se quiser ver tudo da imagem */
+  border-radius: 0.5rem;
+}
+
+.descricao-presente,
+.preco-presente {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+.botao-comprar {
+  background-color: #ffeff1;
+  border-radius: 2rem;
+  color: #c0878e;
+  padding: 0.8rem 1.2rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  border: none;
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+.botoes-navegacao {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.botoes-navegacao button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.final {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 58.625rem;
+  position: relative; /* permite posicionamento absoluto interno */
+  overflow: hidden;   /* evita que a imagem transborde */
+}
+
+.final img:last-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 0; /* <-- borda inferior direita */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.final-texto{
+  font-family: var(--fonte-principal);
+  color: var(--cor-principal);
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.25rem;
+  align-self: center;
+  line-height: 3.5rem;
+}
+
+.final-texto-agradecimento{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--cor-principal);
+  text-align: center;
+  align-self: center;
+  padding-top: 4rem;
+}
+
+.final-texto-agradecimento-palavra{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--cor-principal);
+  padding: 4rem 0 0 2rem;
+}
+
+.final-texto-agradecimento-noivos{
+  font-weight: 400;
+  font-family: 'Casamento';
+  font-size: 5.375rem;
+  text-align: center;
+  align-self: center;
+  color: var(--cor-principal);
+  padding-top: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+  }
+
+  .texto_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paragrafo_1{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    padding-top: 2rem;
+  }
+
+  .paragrafo_2{
+    font-family: 'Casamento';
+    font-weight: 400;
+    font-size: 12.5rem;
+    color: var(--cor-principal);
+    padding-top: 1.5rem;
+  }
+
+  .paragrafo_3{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2.25rem;
+    color: var(--cor-principal);
+    display: flex;
+    text-align: center;
+    padding-top: 1.5rem;
+    line-height: 150%;
+  }
+
+  .data_casamento{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:2.3rem;
+    color: var(--cor-principal);
+    padding-top: 3rem;
+  }
+
+  .dia_semana_casamento {
+    color: var(--cor-principal);
+    font-weight: 400;
+    font-size: 3.5rem;
+    border-bottom: 2px solid var(--cor-principal);;
+    border-top: 2px solid var(--cor-principal);;
+  }
+
+  .dia_mes_ano_casamento{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .dia{
+    font-family: var(--fonte-principal);
+    font-size: 8rem;
+    font-weight: 400;
+  }
+
+  .mes{
+    font-family: var(--fonte-principal);
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  .ano{
+    font-family: var(--fonte-principal);
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  .container {
+    position: relative;
+    margin-top: 12rem;
+  }
+
+  .imagem-3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .ordenamento-orientacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* melhor que center para evitar desalinhamento vertical */
+    width: 100%;
+  }
+  
+  .orientacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+  }
+  
+  .orientacoes-1{
+    font-family: 'Casamento';
+    font-weight: 400;
+    font-size: 10rem;
+    color: var(--cor-principal);
+    text-align: center;
+  }
+  
+  .orientacoes-2{
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cor-principal);
+  }
+  
+  .orientacoes-casal{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--cor-principal);
+    /*border-bottom: 2px solid var(--cor-principal);;
+    border-top: 2px solid var(--cor-principal);;*/
+    box-sizing: border-box;
+  }
+  
+  .orientacoes-casal-titulo{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2.625rem;
+    padding-top: 2rem;
+    cursor: pointer;
+  }
+  
+  .orientacoes-casal-descricao{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  
+  .conjunto-imagens {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+  }
+  
+  .conjunto-imagens img {
+    height: 100%;
+    object-fit: cover; /* ajusta o conteúdo mantendo proporção ou cortando */
+  }
+  .imagem-mobile {
+    display: none;
+  }
+
+  .imagem-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .recepcao {
+    background-image: url("img/img-16.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 76rem;
+    width: 100%;
+  
+    display: flex;              /* Ativa o Flexbox */
+    justify-content: center;    /* Centraliza na horizontal */
+    align-items: center;        /* Centraliza na vertical */
+  }
+
+  .recepcao-cerimonia {
+    width: 64rem;
+    height: 66rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid transparent;
+  }
+  
+  .recepcao-cerimonia-titulo{
+    font-family: 'Casamento';
+    font-size: 9rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .recepcao-cerimonia-mini-retangulo{
+    width: 52.562rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recepcao-cerimonia-texto{
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    width: 100%;
+  }
+  
+  .recepcao-cerimonia-local{
+    font-family: 'Casamento';
+    font-size: 10rem;
+    font-weight: 400;
+    color: #ffffff;
+    width: 100%;
+  }
+  
+  .confirmacao-presenca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 56rem;
+    padding-top: 8rem;
+  }
+  
+  .confirmacao-presenca-div{
+    width: 53rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .confirmacao-presenca-titulo{
+    font-family: 'Casamento';
+    font-weight: 400;
+    font-size: 10rem;
+    color: var(--cor-principal);
+  }
+  
+  .confirmacao-presenca-descricao{
+    font-family: var(--fonte-principal);
+    font-size: 1.88rem;
+    font-weight: 400;
+    color: var(--cor-principal);
+  }
+  
+  .form-confirmacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+  }
+  
+  .confirmacao-presenca-input{
+    width: 80%;
+    height: 6.25rem;
+    border-radius: 7rem;
+    border-color: var(--cor-principal);
+    font-family: var(--fonte-principal);
+    font-size: 4rem;
+    color: var(--cor-principal);
+    padding-left: 1rem;
+  }
+  
+  .confirmacao-presenca-input::placeholder {
+    padding-left: 1rem;
+    color: var(--cor-principal);
+    font-size: 1.88rem;
+  }
+  
+  .confirmacao-presenca-botao{
+    width: 50%;
+    border-radius: 7rem;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    height: 5.25rem;
+    font-family: var(--fonte-principal);
+    font-size: 1.88rem;
+  }
+  
+  .lista-presente{
+    background-color: var(--cor-principal);
+    height: 75.25rem;
+    background-color: #dba5ab;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 3rem 0;
+    width: 100%;
+  }
+  
+  .lista-presente-descricao{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .lista-presente-titulo{
+    font-family: 'Casamento';
+    font-weight: 400;
+    font-size: 10rem;
+    color: #ffffff;
+  }
+  
+  .carrossel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .slides {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 3rem;
+    padding: 1rem;
+    flex-wrap: nowrap;
+  }
+  
+  .card {
+    flex: 0 0 22%; /* mostra ~80% do card, com o resto visível */
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-principal);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .card img {
+    width: 300px;         /* ou qualquer valor que se encaixe bem no layout */
+    height: 300px;        /* igual à largura para ficar quadrada, ou ajuste conforme desejar */
+    object-fit: cover;    /* ou use 'contain' se quiser ver tudo da imagem */
+    border-radius: 0.5rem;
+  }
+  
+  .descricao-presente,
+  .preco-presente {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .botao-comprar {
+    background-color: #ffeff1;
+    border-radius: 2rem;
+    color: #c0878e;
+    padding: 0.8rem 1.2rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    border: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 28px;
+  }
+  
+  
+  .botoes-navegacao {
+    margin-top: 1rem;
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .botoes-navegacao button {
+    font-size: 8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+
+  .final {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 76rem;
+    position: relative; /* permite posicionamento absoluto interno */
+    overflow: hidden;   /* evita que a imagem transborde */
+  }
+  
+  .final img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* <-- borda inferior direita */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .final-texto{
+    font-family: var(--fonte-principal);
+    color: var(--cor-principal);
+    text-align: center;
+    font-weight: 400;
+    font-size: 6rem;
+    align-self: center;
+    line-height: 100%;
+  }
+  
+  .final-texto-agradecimento{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2.25rem;
+    color: var(--cor-principal);
+    text-align: center;
+    align-self: center;
+    padding-top: 4rem;
+  }
+  
+  .final-texto-agradecimento-palavra{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2.25rem;
+    color: var(--cor-principal);
+    padding: 4rem 0 0 4rem;
+  }
+  
+  .final-texto-agradecimento-noivos{
+    font-weight: 400;
+    font-family: 'Casamento';
+    font-size: 8rem;
+    text-align: center;
+    align-self: center;
+    color: var(--cor-principal);
+    padding-top: 2rem;
+  }
+  
+
+}

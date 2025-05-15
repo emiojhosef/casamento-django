@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/presenca-confirmada.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/reset.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+    <title>Presença Confirmada</title>
+</head>
+<body>
+    <div class="confirmacao-presenca-div">
+        <p class="confirmacao-presenca-titulo">Presença Confirmada</p>
+        <p class="confirmacao-presenca-descricao">
+            AGRADECEMOS PELA SUA PARTICIPAÇÃO<br>
+            NO MOMENTO MAIS IMPORTANTE<br>
+            DE NOSSAS VIDAS<br>
+            VEJA NOSSA LISTA DE PRESENTE:
+        </p>
+
+        <!-- Link com âncora -->
+        <a href="{% url 'convite' %}#presentes" class="confirmacao-presenca-botao">Ver Lista de Presentes</a>
+    </div>
+</body>
+</html>

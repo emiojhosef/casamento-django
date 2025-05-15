@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/confirmacao-presenca.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/reset.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+    <title>Convite Encontrado</title>
+</head>
+<body>
+    {% if messages %}
+    <ul class="mensagens">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="POST" action="{% url 'confirmacaopresenca' %}" class="confirmacao-presenca-div">
+        {% csrf_token %}
+        
+        <!-- pode-se passar o nome como hidden, se veio da etapa anterior -->
+        <input type="hidden" name="nome" value="{{ nome }}">
+    
+        <p class="confirmacao-presenca-titulo">Confirme sua presença</p>
+        <p class="confirmacao-presenca-descricao">
+            precisamos confirmar que é você! digite os<br>
+            4 últimos dígitos do seu telefone abaixo:
+        </p>
+    
+        <div class="codigo">
+            <input class="codigo-telefone" type="text" name="digito1" maxlength="1" inputmode="numeric" pattern="[0-9]" required autofocus oninput="this.value.length == 1 && document.querySelector('[name=digito2]').focus();">
+            <input class="codigo-telefone" type="text" name="digito2" maxlength="1" inputmode="numeric" pattern="[0-9]" required oninput="this.value.length == 1 && document.querySelector('[name=digito3]').focus();">
+            <input class="codigo-telefone" type="text" name="digito3" maxlength="1" inputmode="numeric" pattern="[0-9]" required oninput="this.value.length == 1 && document.querySelector('[name=digito4]').focus();">
+            <input class="codigo-telefone" type="text" name="digito4" maxlength="1" inputmode="numeric" pattern="[0-9]" required>
+        </div>
+    
+        <button type="submit" class="confirmacao-presenca-botao">Confirmar</button>
+    </form>
+</body>

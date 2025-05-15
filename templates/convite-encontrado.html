@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'assets/convite-encontrado.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/reset.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet" />
+    <title>Convite Encontrado</title>
+</head>
+<body>
+    <form action="{% url 'conviteencontrado' %}" method="POST" class="confirmacao-presenca-div">
+        {% csrf_token %}
+
+        <p class="confirmacao-presenca-titulo">Confirme sua presença</p>
+        <p class="confirmacao-presenca-descricao">
+            Sua resposta é a peça que falta em nossa<br>
+            celebração. Insira o seu nome abaixo:
+        </p>
+
+        <!-- Convidado principal -->
+        <div class="confirmacao-presenca-input selecionavel" data-valor="convidado">
+            <label>
+                <input type="checkbox" name="confirmados" value="convidado" hidden />
+                <p class="confirmacao-presenca-input-nome">{{ nome }}</p>
+                <p class="confirmacao-presenca-input-selecionar">Selecionar &gt;</p>
+            </label>
+        </div>
+
+        <!-- Membros da família -->
+        {% if membros %}
+            {% for membro in membros %}
+            <div class="confirmacao-presenca-input selecionavel" data-valor="{{ membro.id }}">
+                <label>
+                    <input type="checkbox" name="confirmados" value="{{ membro.id }}" hidden />
+                    <p class="confirmacao-presenca-input-nome">{{ membro.nome }}</p>
+                    <p class="confirmacao-presenca-input-selecionar">Selecionar &gt;</p>
+                </label>
+            </div>
+            {% endfor %}
+        {% endif %}
+
+        <input type="hidden" name="nome" value="{{ nome }}" />
+
+        <button type="submit" class="confirmacao-presenca-botao" style="margin-top: 20px;">
+            Confirmar
+        </button>
+    </form>
+
+    <script>
+        // Seleciona todos os blocos clicáveis
+        const blocosSelecionaveis = document.querySelectorAll('.selecionavel');
+
+        blocosSelecionaveis.forEach(bloco => {
+            bloco.addEventListener('click', () => {
+                const checkbox = bloco.querySelector('input[type="checkbox"]');
+                if (checkbox.checked) {
+                    checkbox.checked = false;
+                    bloco.classList.remove('selecionado');
+                } else {
+                    checkbox.checked = true;
+                    bloco.classList.add('selecionado');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
